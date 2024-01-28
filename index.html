@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Project Title</title>
+<meta charset="utf-8">
+<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
+<style> @-ms-viewport { width: device-width; } </style>
+<link rel="stylesheet" href="vendor/reset.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="multiple-scenes view-control-buttons">
+
+<div id="pano"></div>
+
+<div id="sceneList">
+  <ul class="scenes">
+    
+      <a href="javascript:void(0)" class="scene" data-id="0-eg-erlachgasse">
+        <li class="text">EG, Erlachgasse</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="1-eg-hauseck">
+        <li class="text">EG, Hauseck</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="2-eg-eckertgasse">
+        <li class="text">EG, Eckertgasse</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="3-eg-einfahrt-1">
+        <li class="text">EG, Einfahrt (1)</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="4-eg-einfahrt-2">
+        <li class="text">EG, Einfahrt (2)</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="5-eg-einfahrt-3">
+        <li class="text">EG, Einfahrt (3)</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="6-eg-hof-1">
+        <li class="text">EG, Hof (1)</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="7-eg-hof-2">
+        <li class="text">EG, Hof (2)</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="8-eg-stgh">
+        <li class="text">EG, STGH</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="9-eg-stgh-t1-t2">
+        <li class="text">EG, STGH, T1, T2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="10-eg-stgh-t3-t4">
+        <li class="text">EG, STGH, T3, T4</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="11-eg-stgh-t5-t6-7">
+        <li class="text">EG, STGH, T5, T6-7</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="12-eg-stgh-wcs">
+        <li class="text">EG, STGH, WCs</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="13-1og-stgh-t8-t9">
+        <li class="text">1OG, STGH, T8, T9</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="14-1og-stgh-t14">
+        <li class="text">1OG, STGH, T14</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="15-1og-stgh-t10-12">
+        <li class="text">1OG, STGH, T10-12</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="16-1og-stgh-wcs">
+        <li class="text">1OG, STGH, WCs</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="17-2og-stgh-t15-t16">
+        <li class="text">2OG, STGH, T15, T16</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="18-2og-stgh-t17-18">
+        <li class="text">2OG, STGH, T17-18</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="19-2og-stgh-t19-t20-21">
+        <li class="text">2OG, STGH, T19, T20-21</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="20-2og-stgh-wcs">
+        <li class="text">2OG, STGH, WCs</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="21-3og-stgh-t22-t23">
+        <li class="text">3OG, STGH, T22, T23</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="22-3og-stgh-t24">
+        <li class="text">3OG, STGH, T24</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="23-3og-stgh-t25-26-t27-28">
+        <li class="text">3OG, STGH, T25-26, T27-28</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="24-3og-stgh-wcs">
+        <li class="text">3OG, STGH, WCs</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="25-dg-stgh">
+        <li class="text">DG, STGH</li>
+      </a>
+    
+  </ul>
+</div>
+
+<div id="titleBar">
+  <h1 class="sceneName"></h1>
+</div>
+
+<a href="javascript:void(0)" id="autorotateToggle">
+  <img class="icon off" src="img/play.png">
+  <img class="icon on" src="img/pause.png">
+</a>
+
+<a href="javascript:void(0)" id="fullscreenToggle">
+  <img class="icon off" src="img/fullscreen.png">
+  <img class="icon on" src="img/windowed.png">
+</a>
+
+<a href="javascript:void(0)" id="sceneListToggle">
+  <img class="icon off" src="img/expand.png">
+  <img class="icon on" src="img/collapse.png">
+</a>
+
+<a href="javascript:void(0)" id="viewUp" class="viewControlButton viewControlButton-1">
+  <img class="icon" src="img/up.png">
+</a>
+<a href="javascript:void(0)" id="viewDown" class="viewControlButton viewControlButton-2">
+  <img class="icon" src="img/down.png">
+</a>
+<a href="javascript:void(0)" id="viewLeft" class="viewControlButton viewControlButton-3">
+  <img class="icon" src="img/left.png">
+</a>
+<a href="javascript:void(0)" id="viewRight" class="viewControlButton viewControlButton-4">
+  <img class="icon" src="img/right.png">
+</a>
+<a href="javascript:void(0)" id="viewIn" class="viewControlButton viewControlButton-5">
+  <img class="icon" src="img/plus.png">
+</a>
+<a href="javascript:void(0)" id="viewOut" class="viewControlButton viewControlButton-6">
+  <img class="icon" src="img/minus.png">
+</a>
+
+<script src="vendor/screenfull.min.js" ></script>
+<script src="vendor/bowser.min.js" ></script>
+<script src="vendor/marzipano.js" ></script>
+
+<script src="data.js"></script>
+<script src="index.js"></script>
+
+</body>
+</html>
